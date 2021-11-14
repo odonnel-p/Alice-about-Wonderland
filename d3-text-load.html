@@ -1,0 +1,31 @@
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+</head>
+<body>
+    <svg></svg>
+
+    <script>
+        d3.text("data/Alice-text-raw.txt")
+            .then(function(data) {
+      
+                // data is a string
+                data = data.split("\n");
+      
+                data = data.map((str) => {
+                    let tokens = str.split(" ");
+      
+                    return {
+                        letter: tokens[0],
+                        number: tokens[1],
+                        color: tokens[2]
+                    };
+                });
+      
+                drawText("#textDemo", data);
+             });
+      </script>
+      
+      <svg id="textDemo" class="lightblue" width="80" height="50"></svg>
+</body>
+
