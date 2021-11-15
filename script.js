@@ -1,6 +1,6 @@
 console.log("Literary Structure Analysis");
 
-var q = d3.text("/data/Alice-text-raw.txt", function(raw_text) {
+var q = d3.text("/Alice-text-raw.txt", function(raw_text) {
     //console.log(data);
 
     var formatted = createJSONstructure(raw_text);
